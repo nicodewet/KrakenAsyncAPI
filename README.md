@@ -14,7 +14,7 @@ An exercise to consume an AsyncAPI specification as a client.
 
 This was a simple exercise to validate an AsyncAPI specification, as linked to from an [AsycAPI blog post](https://www.asyncapi.com/blog/websocket-part1), and generate hopefully usable client code from it. If you stumble across this repo, read the cited blog post series first.
 
-Given that I know Spring I expected to see particular WebSocket dependencies in the generated Gradle or Maven project object model file.
+Given that I know Spring I expected to see [particular WebSocket dependencies](https://www.baeldung.com/websockets-spring) in the generated Gradle or Maven project object model file.
 
 I also wanted to determine whether a commercial API governance tool produced similar validation output and how they differ.
 
