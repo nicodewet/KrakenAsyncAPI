@@ -24,11 +24,14 @@ Finally, I used the docker based version of the AsyncAPI CLI since brew install 
 
 Clone [repo](https://github.com/asyncapi/cli) and build image to have an ARM64 image.
 
+```
   % git clone git@github.com:asyncapi/cli.git
   % docker build -t asyncapi/cli:latest .
+```
 
 ## validate
 
+```
   % docker run --rm -it \
   --user=root \
   -v ./asyncapi-websocket-kraken.yml:/app/asyncapi.yml \
@@ -45,13 +48,18 @@ Clone [repo](https://github.com/asyncapi/cli) and build image to have an ARM64 i
     3:6      warning  asyncapi-info-license        Info object should have "license" object.                                                     info
 
   ✖ 6 problems (0 errors, 5 warnings, 1 info, 0 hints)
+```
 
+This will be required in a pipeline:
 
+```
   % echo $?
   0
+```
 
 ## versions
 
+```
   % docker run --rm -it \
   --user=root \
   -v ./asyncapi-websocket-kraken.yml:/app/asyncapi.yml \
@@ -69,6 +77,7 @@ Clone [repo](https://github.com/asyncapi/cli) and build image to have an ARM64 i
     ├@asyncapi/protobuf-schema-parser/3.0.0
     ├@asyncapi/raml-dt-schema-parser/4.0.6
     └@asyncapi/studio/0.17.4
+```
 
 ## generate
 
@@ -78,10 +87,12 @@ See generator templates list: https://www.asyncapi.com/docs/tools/generator/temp
 
 ### generate @asyncapi/java-spring-template
 
+```
   % docker run --rm -it \
      --user=root -v ${PWD}/asyncapi-websocket-kraken.yml:/app/asyncapi.yml \
      -v ${PWD}/output:/app/output \
      asyncapi/cli generate fromTemplate -o /app/output /app/asyncapi.yml @asyncapi/java-spring-template --force-write
+```
 
 Lots of stuff not supported: https://github.com/asyncapi/java-spring-template
 
