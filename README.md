@@ -2,13 +2,12 @@
 
 An exercise to consume an AsyncAPI specification as a client.
 
-1. Get AsyncAPI Specification based on the Kraken Websockets API.
+1. Get [AsyncAPI Specification](asyncapi-websocket-kraken.yml) based on the Kraken Websockets API.
 2. Install AsyncAPI on local machine.
 3. Validate AsyncAPI on local machine
 4. Compare validation output to commercial API governance tool output.
 5. Generate Spring client and inspect code.
 6. Hopefully try to run Spring client code - abandoned, goes to show how important dogfooding is.
-
 
 ## TLDR
 
