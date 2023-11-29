@@ -2,7 +2,7 @@
 
 An exercise to consume an AsyncAPI specification as a client.
 
-1. Get [AsyncAPI Specification](asyncapi-websocket-kraken.yml) based on the Kraken Websockets API.
+1. Get an [AsyncAPI Specification](asyncapi-websocket-kraken.yml) based on the Kraken Websockets API.
 2. Install AsyncAPI on local machine.
 3. Validate AsyncAPI on local machine
 4. Compare validation output to commercial API governance tool output.
@@ -28,7 +28,7 @@ Clone [repo](https://github.com/asyncapi/cli) and build image to have an ARM64 i
   % docker build -t asyncapi/cli:latest .
 ```
 
-## validate
+## AsyncAPI CLI validate the specification
 
 ```
   % docker run --rm -it \
@@ -56,7 +56,7 @@ This will be required in a pipeline:
   0
 ```
 
-## versions
+## Check the AsyncAPI CLI component versions
 
 ```
   % docker run --rm -it \
@@ -78,7 +78,7 @@ This will be required in a pipeline:
     └@asyncapi/studio/0.17.4
 ```
 
-## generate
+## AsyncAPI CLI generate client code
 
 See https://www.asyncapi.com/docs/tools/generator
 
